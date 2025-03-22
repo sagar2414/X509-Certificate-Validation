@@ -1,4 +1,4 @@
-package org.base.dataProviders;
+package org.testcases;
 
 import java.util.Date;
 

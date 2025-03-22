@@ -27,7 +27,7 @@ public class CertificateUtility {
 
 	public void generateCertificate() {
 		File certificateDestination;
-		String[] command = { "openssl", "req", "-x509", "-newkey", "rsa:2048", "-keyout",
+		String[] openSSLCommand = { "openssl", "req", "-x509", "-newkey", "rsa:2048", "-keyout",
 				Repository.getPrivateKeyPath(), "-out", Repository.getCertificatePath(), "-days", "365", "-nodes",
 				"-subj", Repository.getSubjectName() };
 
@@ -38,7 +38,7 @@ public class CertificateUtility {
 			}
 
 			// Create a ProcessBuilder instance
-			ProcessBuilder processBuilder = new ProcessBuilder(command);
+			ProcessBuilder processBuilder = new ProcessBuilder(openSSLCommand);
 
 			// Redirect error messages to the console
 			processBuilder.redirectErrorStream(true);

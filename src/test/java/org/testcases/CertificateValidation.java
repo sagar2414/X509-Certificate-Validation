@@ -7,7 +7,6 @@ import java.security.cert.X509Certificate;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.base.dataProviders.BaseDataProvider;
 import org.base.utility.CertificateUtility;
 import org.base.utility.Repository;
 import org.testng.Assert;
