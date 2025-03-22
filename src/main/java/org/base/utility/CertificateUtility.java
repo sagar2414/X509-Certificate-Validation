@@ -27,9 +27,10 @@ public class CertificateUtility {
 
 	public void generateCertificate() {
 		File certificateDestination;
-		String[] openSSLCommand = { "openssl", "req", "-x509", "-newkey", "rsa:2048", "-keyout",
-				Repository.getPrivateKeyPath(), "-out", Repository.getCertificatePath(), "-days", "365", "-nodes",
-				"-subj", Repository.getSubjectName() };
+		String[] openSSLCommand = { "openssl", "req", Repository.getSelfsignedcertificate(), "-newkey",
+				Repository.getNewkey(), "-keyout", Repository.getPrivateKeyPath(), "-out",
+				Repository.getCertificatePath(), "-days", Repository.getDays(), "-nodes", "-subj",
+				Repository.getSubjectName() };
 
 		try {
 			certificateDestination = getFile(Repository.getCertificateFolder());

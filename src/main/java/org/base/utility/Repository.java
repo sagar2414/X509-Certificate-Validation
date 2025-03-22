@@ -3,6 +3,9 @@ package org.base.utility;
 public class Repository {
 	private static final String PRIVATE_KEY_FILE = "key.pem";
 	private static final String CERTIFICATE_FILE = "cert.pem";
+	private static final String SELFSIGNEDCERTIFICATE = "-x509";
+	private static final String NEWKEY = "rsa:2048";
+	private static final String DAYS = "365";
 	private static final String CERTIFICATE_DESTINATION = "./src/main/resources/certificatesDestination";
 	private static final String SUBJECT_NAME = "/C=US/ST=California/L=San Francisco/O=MyCompany/OU=QA/CN=mydomain.com";
 	private static final String EXPECTED_SUBJECT = "CN=mydomain.com,OU=QA,O=MyCompany,L=San Francisco,ST=California,C=US";
@@ -37,4 +40,15 @@ public class Repository {
 		return EXPECTED_ORG_NAME;
 	}
 
+	public static String getDays() {
+		return DAYS;
+	}
+
+	public static String getSelfsignedcertificate() {
+		return SELFSIGNEDCERTIFICATE;
+	}
+
+	public static String getNewkey() {
+		return NEWKEY;
+	}
 }
