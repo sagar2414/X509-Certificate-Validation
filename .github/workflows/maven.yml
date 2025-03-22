@@ -6,7 +6,7 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Java CI with Maven
+name: CI with Maven
 
 on:
   push:
@@ -18,7 +18,7 @@ on:
       command:
         description: 'Select Maven Command'
         required: true
-        default: 'mvn test'
+        default: 'test'
         type: choice
         options:
           - clean compile
