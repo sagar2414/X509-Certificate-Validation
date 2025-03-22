@@ -8,6 +8,11 @@ This repository contains a Maven project with TestNG integration.
 2. Check for pre-requisite checklist
 3. Execute the test using maven command given below
 
+**Note** :
+
+	I have added Github actions workflow, but as per Github rules, it can only be triggered by Owners and collaborators, 
+	so I have triggered and kept few execution results. Please review latest Actions in the same repository, triggered for the execution results.
+	
 #Maven command
 	mvn clean compile
 	mvn test
