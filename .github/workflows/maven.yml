@@ -14,15 +14,6 @@ on:
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
-    inputs:
-      command:
-        description: 'Select Maven Command'
-        required: true
-        default: 'test'
-        type: choice
-        options:
-          - clean compile
-          - test
 jobs:
   run-tests:
     runs-on: ubuntu-latest
@@ -36,7 +27,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Maven Tests
-      run: mvn ${{ inputs.command }}
+      run: mvn test
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
